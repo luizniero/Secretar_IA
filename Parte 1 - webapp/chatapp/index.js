@@ -1,7 +1,8 @@
-// Inicializa o WebSocket
+// Inicializa a conexão com o servidor WebSocket
 var socket = new WebSocket('ws://localhost:8765');
 
-// Espera por mensagens do servidor
+// Define o que acontece quando o servidor envia uma mensagem.
+// chama mostrarMensagem com o parâmetro 'bot' (usado na escolha do classname no css)
 socket.onmessage = function(event) {
   mostrarMensagem("Bot", event.data, "bot");
 };
@@ -18,6 +19,7 @@ window.onload = function() {
     if (!mensagem) return;
 
     mostrarMensagem("Você", mensagem, "user");
+    // envio a mensagem para o servidor websocket
     socket.send(mensagem);
     input.value = '';
   };
