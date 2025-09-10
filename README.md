@@ -61,10 +61,11 @@ Siga os passos abaixo para configurar e executar a Secretar-IA em seu ambiente l
 
 1.  **Credenciais do Google Cloud**:
     *   No Google Cloud Console, navegue até "APIs & Services" > "Credentials".
-    *   Clique em "CREATE CREDENTIALS" > "OAuth client ID".
+    *   Clique em "CREATE CREDENTIALS" > "Create credentials" > "OAuth client ID".
     *   Selecione "Desktop app" como tipo de aplicação.
     *   Dê um nome ao seu cliente OAuth e clique em "CREATE".
     *   Faça o download do arquivo JSON das credenciais. Renomeie-o para `credentials.json` e coloque-o na raiz do seu projeto (`agentic_secretaria/`).
+    *   No 'google auth platform', em 'público alvo', adicione o e-mail que você utilizou no grupo de Usuários de testes.
 
 2.  **Autenticação Inicial**:
     *   Na primeira vez que você executar uma ferramenta que interage com o Google Calendar (como `consulta_disponibilidade` ou `agenda_consulta`), uma janela do navegador será aberta.
